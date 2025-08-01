@@ -1,0 +1,77 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fefefe;
+}
+
+
+
+/* Header Section */
+header.bg-gradient {
+  background: linear-gradient(135deg, #e2f0ff, #d3e0ff);
+}
+
+header h1 {
+  font-weight: bold;
+  color: #003366;
+}
+
+header p.lead {
+  font-style: italic;
+}
+
+/* Section Cards */
+.section-card {
+  border-left: 4px solid #0d6efd;
+  padding-left: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Links Inside Cards */
+.card .nav-link {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.card .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+}
+
+footer small {
+  color: #aaa;
+}
+
+/* Dark Mode Toggle */
+.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+.dark-mode header {
+  background: linear-gradient(135deg, #444, #222);
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-mode .nav-link,
+.dark-mode .dropdown-item {
+  color: #eaeaea;
+}
