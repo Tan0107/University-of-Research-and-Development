@@ -1,85 +1,318 @@
+/*======================================================
+  General Styles and CSS Variables
+========================================================*/
+
+/* Defines a modern color palette and common values for consistency */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --dark-color: #212529;
+  --light-color: #f8f9fa;
+  --success-color: #28a745;
+  --border-radius: 0.5rem;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+  --hover-transition: all 0.3s ease-in-out;
+}
+
+/* Base styles for the body and typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+  background-color: var(--light-color);
+  color: #495057;
+  scroll-behavior: smooth;
+  padding-top: 56px; /* Space for the fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--hover-transition);
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/*======================================================
+  Navigation
+========================================================*/
+
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand .logo {
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: var(--dark-color);
+  margin-left: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+
+/*======================================================
+  Hero Section (Home)
+========================================================*/
+
 #home {
-  background-image: 
-  linear-gradient(rgba(0, 0, 50, 1), rgba(0, 0, 100, 0.6)),
-  url('./images/research.jpg'); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
+  /* Linear gradient overlay to ensure text readability on the image */
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('./images/research.jpg') no-repeat center center;
   
-  /* Layout fixes */
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  color: white;
   min-height: 100vh;
-  padding-top: 100px; /* Offset for navbar */
-  padding-bottom: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 8rem 1rem;
 }
 
-#home img {
-  transition: transform 0.3s ease;
+#home h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-#home img:hover {
-  transform: scale(1.03);
+#home .lead, #home p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-/* Responsive Typography */
-@media (max-width: 768px) {
-  #home h1 {
-    font-size: 1.75rem;
-  }
-
-  #home p {
-    font-size: 0.95rem;
-  }
-}
-.footer {
-  background-color: #1f1f2e; /* Deep charcoal for contrast */
-  color: #eaeaea;
-  font-size: 0.95rem;
+#home .btn {
+  border-radius: 50px;
+  padding: 12px 30px;
+  border: 2px solid white;
+  font-weight: 600;
+  transition: var(--hover-transition);
 }
 
-.footer-link {
-  color: #eaeaea;
-  text-decoration: none;
-  margin: 0 0.5rem;
-  transition: color 0.3s ease;
+#home .btn:hover {
+  background-color: white;
+  color: var(--dark-color);
+  border-color: white;
+  transform: translateY(-3px);
 }
 
-.footer-link:hover {
-  color: #ffdd57; /* Soft gold accent */
+/*======================================================
+  Section Styling
+========================================================*/
+
+main section {
+  padding: 6rem 0;
 }
 
-@media (max-width: 768px) {
-  .footer .text-md-end,
-  .footer .text-md-start {
-    text-align: center !important;
-  }
-
-  .footer h5 {
-    font-size: 1.1rem;
-  }
+/* Featured Section */
+#featured {
+  background-color: #f0f2f5;
 }
 
+#featured h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
 
-.section-card:hover {
+#featured .card {
+  border: none;
+  border-radius: var(--border-radius);
+  transition: var(--hover-transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#featured .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#featured .card-body {
+  padding: 2rem;
+}
+
+/* Categories Section */
+#categories-section .bg-dark {
+  padding: 4rem 1rem;
+}
+
+#categories-section h2 {
+  color: white;
+}
+
+#categories-section .card {
+  border: none;
+  border-radius: var(--border-radius);
+  transition: var(--hover-transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#categories-section .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#categories-section .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+/* Resources Section */
+#resources {
+  background-color: #e9ecef;
+}
+
+#resources .card {
+  border-left: 5px solid var(--primary-color);
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--hover-transition);
+}
+
+#resources .card:hover {
   transform: scale(1.02);
-  transition: transform 0.3s ease-in-out;
-}
-.section-icon {
-  font-size: 2rem;
-  margin-right: 0.5rem;
-}
-.dark-mode {
-  background-color: #121212;
-  color: #f2f2f2;
-}
-.dark-mode a {
-  color: #aadffd;
-}
-.dark-toggle-btn {
-  cursor: pointer;
 }
 
+#resources .list-group-item {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: transparent;
+}
+
+#resources .list-group-item:last-child {
+  border-bottom: none;
+}
+
+#resources .nav-link {
+  font-weight: 500;
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: var(--hover-transition);
+}
+
+#resources .nav-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* About Section */
+#about {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 6rem 0;
+}
+
+#about h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+#about p {
+  color: #e9ecef;
+}
+
+#about .lead {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+#mission {
+  background-color: white;
+  padding: 6rem 0;
+}
+
+#mission h2 {
+  color: var(--dark-color);
+}
+
+#mission .lead {
+  color: var(--secondary-color);
+}
+
+/* Contact Section */
+#contact {
+  background-color: var(--light-color);
+  padding: 6rem 0;
+}
+
+#contact h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+#contact a {
+  color: var(--dark-color);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
+  transition: var(--hover-transition);
+}
+
+#contact a:hover {
+  color: var(--primary-color);
+  text-decoration-color: var(--primary-color);
+}
+
+#contact .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+#contact .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: var(--hover-transition);
+}
+
+#contact .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/*======================================================
+  Footer
+========================================================*/
+
+.footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 3rem 0;
+}
+
+.footer h5 {
+  color: white;
+  font-weight: 600;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+  color: #adb5bd;
+}
+
+.footer .list-inline-item a {
+  color: white;
+  font-size: 1.5rem;
+  transition: var(--hover-transition);
+}
+
+.footer .list-inline-item a:hover {
+  color: var(--primary-color) !important;
+  transform: scale(1.1);
+}

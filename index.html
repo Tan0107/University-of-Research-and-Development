@@ -4,141 +4,358 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Educational Resource Hub</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
   <link rel="stylesheet" href="index.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
 </head>
+
 <body>
-  <!-- Navbar -->
- <nav class="navbar navbar-light bg-light fixed-top shadow-sm">
-   <div class="container-fluid">
-     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-       <img src="./images/studying_1903172.png" alt="University Logo" class="img-fluid" style="max-width: 40px;" />
-       University of Research and Development
-     </a>
-     
-     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-       <span class="navbar-toggler-icon"></span>
-     </button>
+  <nav class="navbar navbar-light bg-light fixed-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#home">
+        <img
+          src="./images/studying_1903172.png"
+          alt="University Logo"
+          class="img-fluid"
+          style="max-width: 40px;"
+        />
+        University of Research and Development
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#categories-section">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#resources">Resources</a></li>
+                <li><a class="dropdown-item" href="#featured">Features</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3">
+            <input class="form-control me-2" type="search" placeholder="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-       <div class="offcanvas-header">
-         <h5 class="offcanvas-title">Menu</h5>
-         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-       </div>
-       <div class="offcanvas-body">
-         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-           <li class="nav-item"><a class="nav-link" href="category.html">Categories</a></li>
-           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More</a>
-             <ul class="dropdown-menu">
-               <li><a class="dropdown-item" href="resources.html">Resources</a></li>
-               <li><a class="dropdown-item" href="feature.html">Features</a></li>
-               <li><hr class="dropdown-divider" /></li>
-               <li><a class="dropdown-item" href="#">Something else here</a></li>
-             </ul>
-           </li>
-         </ul>
-         <form class="d-flex mt-3">
-           <input class="form-control me-2" type="search" placeholder="Search" />
-           <button class="btn btn-outline-success" type="submit">Search</button>
-         </form>
-       </div>
-     </div>
-   </div>
- </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="text-white d-flex align-items-center">
+  <section class="container-fluid" id="home">
     <div class="container text-center mt-5 pt-5">
-      <header class="mb-5">
-        <h1 class="display-4 fw-bold">Welcome to the University of Research and Development</h1>
-        <<p class="lead">
-          The University of Research and Development is your gateway to curated learning materials, expert-led instruction, and transformative educational experiences. We empower students, researchers, and educators through access to interdisciplinary resources, dynamic programs, and real-world applications that foster continuous growth and discovery.
+      <header class="mb-5" id="introductions">
+        <h1 class="display-4 fw-bold">
+          Welcome to the University of Research and Development
+        </h1>
+        <p class="lead">
+          The University of Research and Development is your gateway to curated learning materials, expert-led instruction, and transformative educational experiences.
         </p>
-
         <p>
-          Championing innovation, critical thinking, and collaborative exploration, our institution is built on a foundation of academic excellence and inclusive scholarship. Explore departments driven by research breakthroughs, open-access courses, and development programs designed to tackle global challenges. From virtual labs and scientific repositories to humanities think tanks, we provide a vibrant ecosystem for lifelong learning and purpose-driven inquiry.
+          Championing innovation, critical thinking, and collaborative exploration, our institution is built on a foundation of academic excellence and inclusive scholarship.
         </p>
-
-        <a href="about.html" class="btn btn-outline-light mt-3 mx-2">About Us</a>
-        <a href="category.html" class="btn btn-outline-light mt-3 mx-2">Academic Categories</a>
-        <a href="feature.html" class="btn btn-outline-light mt-3 mx-2">Features</a>
+        <a href="#about" class="btn btn-outline-light mt-3 mx-2" id="about-btn">About Us</a>
+        <a href="#categories-section" class="btn btn-outline-light mt-3 mx-2">Academic Categories</a>
+        <a href="#featured" class="btn btn-outline-light mt-3 mx-2">Features</a>
       </header>
+    </div>
+  </section>
 
-      <!-- Research Highlights -->
-      <div class="row justify-content-center">
-        <div class="col-md-4 mb-4">
-          <img src="./images/innovation.jpg" alt="Innovation" class="img-fluid rounded shadow-sm" />
-          <h5 class="mt-3">Research & Innovation</h5>
-          <p class="small">Explore studies in science, education, and technology.</p>
+  <section class="container py-5" id="featured">
+    <h2 class="text-center mb-4 fw-bold">🔍 Research & Development Features</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="fw-bold">Class: Innovation Hubs</h5>
+            <p><strong>Responsibilities:</strong> Facilitate prototyping, support idea incubation</p>
+            <p><strong>Collaborators:</strong> Academic Departments, Students</p>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="./images/modern.jpg" alt="Education Research" class="img-fluid rounded shadow-sm" />
-          <h5 class="mt-3">Educational Research</h5>
-          <p class="small">Discover how insights shape modern learning.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="fw-bold">Class: Publication Support</h5>
+            <p><strong>Responsibilities:</strong> Guide publishing, incentivize documentation</p>
+            <p><strong>Collaborators:</strong> Faculty Advisors, Journals</p>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="./images/development.jpg" alt="Development Programs" class="img-fluid rounded shadow-sm" />
-          <h5 class="mt-3">Development Programs</h5>
-          <p class="small">Support inclusive and accessible education.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="fw-bold">Class: Collaborative Research</h5>
+            <p><strong>Responsibilities:</strong> Foster cross-disciplinary initiatives</p>
+            <p><strong>Collaborators:</strong> Industry Partners, Research Teams</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="fw-bold">Class: Grant Development</h5>
+            <p><strong>Responsibilities:</strong> Assist funding proposals, plan projects</p>
+            <p><strong>Collaborators:</strong> Funding Agencies, Admin Office</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="fw-bold">Class: Digital Repository</h5>
+            <p><strong>Responsibilities:</strong> Centralize research outputs</p>
+            <p><strong>Collaborators:</strong> IT Services, Research Teams</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="fw-bold">Class: Recognition & Awards</h5>
+            <p><strong>Responsibilities:</strong> Celebrate achievements, organize ceremonies</p>
+            <p><strong>Collaborators:</strong> R&D Committee, Events Team</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
- <footer class="footer bg-dark text-white py-4">
-   <div class="container">
-     <div class="row align-items-center">
-       
-       <!-- Branding and Vision -->
-       <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
-         <h5 class="fw-semibold">University of Research and Development</h5>
-         <p class="mb-1">&copy; 2025 All rights reserved.</p>
-         <p class="small fst-italic">Advancing knowledge. Shaping futures.</p>
-         <p class="mb-0 small">
-           📍 123 Innovation Blvd, Santo Tomas City, PH<br />
-           ☎️ (+63) 917 123 4567<br />
-           ✉️ info@urd.edu.ph
-         </p>
-       </div>
+  <section class="container-fluid" id="categories-section">
+    <header class="bg-dark  text-center py-5">
+      <div class="container ">
+        <h1 class="display-5 fw-bold text-white">Explore Academic Categories</h1>
+        <p class="lead mb-0">Discover Information Technology, Psychology & Behavioral Sciences, and Business & Economics</p>
+      </div>
+    </header>
+    <div class="container mt-5">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="./images/it.jpg" class="card-img-top" alt="IT">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Information Technology</h5>
+              <p class="card-text flex-grow-1">Explore specialized fields within Information Technology—from cybersecurity and software development to systems analysis and cloud infrastructure—covering cutting-edge curricula, industry-experienced faculty, and innovative student-led tech projects. Engage in hands-on learning that bridges theory and real-world application, preparing you for dynamic roles in today’s digital ecosystem.</p>
+              <a href="#it-resources" class="btn btn-outline-primary mt-auto">View Departments</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/psycology.jpg" class="card-img-top" alt="Psychology">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Psychology & Behavioral Sciences</h5>
+              <p class="card-text flex-grow-1">This field equips students with analytical, empathetic, and research-driven skills to address real-world challenges—from mental health and education to workplace dynamics and public policy. Whether you're studying cognitive biases, designing behavioral interventions, or exploring cultural influences on identity, Psychology & Behavioral Sciences offers a powerful lens into the human experience.</p>
+              <a href="#psych-resources" class="btn btn-outline-primary mt-auto">View Departments</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/business.jpg" class="card-img-top" alt="Business">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Business & Economics</h5>
+              <p class="card-text flex-grow-1">Equips learners with analytical tools, strategic thinking, and financial literacy to thrive in diverse industries—from corporate leadership and policymaking to entrepreneurship and economic research. It’s a powerful blend of theory and practice that helps shape smarter decisions in a rapidly evolving world.</p>
+              <a href="#biz-resources" class="btn btn-outline-primary mt-auto">View Departments</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-       <!-- Navigation & Social Links -->
-       <div class="col-md-6 text-md-end text-center">
-         <ul class="list-inline mb-0">
-           <li class="list-inline-item">
-             <a href="https://facebook.com/universityRD" class="text-white" target="_blank" aria-label="Facebook">
-               <i class="bi bi-facebook fs-5"></i>
-             </a>
-           </li>
-           <li class="list-inline-item">
-             <a href="https://instagram.com/universityRD" class="text-white" target="_blank" aria-label="Instagram">
-               <i class="bi bi-instagram fs-5"></i>
-             </a>
-           </li>
-           <li class="list-inline-item">
-             <a href="https://twitter.com/universityRD" class="text-white" target="_blank" aria-label="Twitter">
-               <i class="bi bi-twitter fs-5"></i>
-             </a>
-           </li>
-           <li class="list-inline-item">
-             <a href="https://linkedin.com/school/universityRD" class="text-white" target="_blank" aria-label="LinkedIn">
-               <i class="bi bi-linkedin fs-5"></i>
-             </a>
-           </li>
-         </ul>
-       </div>
+  <section class="container-fluid py-5 bg-light" id="resources">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Academic Resources</h2>
+      <div class="card section-card shadow-sm mb-4" id="it-resources">
+        <div class="card-body">
+          <h3 class="card-title"><span class="section-icon"></span>Information Technology</h3>
+          <ul class="list-group list-group-flush mt-3">
+            <li class="list-group-item"><a class="nav-link" href="https://developer.mozilla.org" target="_blank">MDN Web Docs – Dev guides for HTML, CSS, JS, and APIs</a></li>
+            <li class="list-group-item"><a class="nav-link" href="https://www.freecodecamp.org" target="_blank">freeCodeCamp – Interactive coding lessons</a></li>
+            <li class="list-group-item"><a class="nav-link" href="https://www.binadox.com/blog/understanding-the-basics-of-it-resource-management/" target="_blank">Binadox – IT resource management fundamentals</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card section-card shadow-sm mb-4" id="psych-resources">
+        <div class="card-body">
+          <h3 class="card-title"><span class="section-icon"></span>Psychology & Behavioral Sciences</h3>
+          <ul class="list-group list-group-flush mt-3">
+            <li class="list-group-item"><a class="nav-link" href="https://www.psychologytools.com" target="_blank">Psychology Tools – Evidence-based therapy resources</a></li>
+            <li class="list-group-item"><a class="nav-link" href="https://www.psychology.org/resources/free-online-resources-for-psychology-beginners/" target="_blank">Psychology.org – Beginner-friendly psychological resources</a></li>
+            <li class="list-group-item"><a class="nav-link" href="https://www.therapistaid.com" target="_blank">Therapist Aid – Mental health worksheets and guides</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card section-card shadow-sm" id="biz-resources">
+        <div class="card-body">
+          <h3 class="card-title"><span class="section-icon"></span>Business & Economics</h3>
+          <ul class="list-group list-group-flush mt-3">
+            <li class="list-group-item"><a class="nav-link" href="https://articles.outlier.org/economic-resources-examples" target="_blank">Outlier – Explained examples of economic resources</a></li>
+            <li class="list-group-item"><a class="nav-link" href="https://penpoin.com/economic-resource/" target="_blank">Penpoin – Overview of production inputs</a></li>
+            <li class="list-group-item"><a class="nav-link" href="https://girlsforbusiness.org/index.php/blog/item/the-four-economic-resources" target="_blank">Girls For Business – The core economic factors</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-     </div>
-   </div>
- </footer>
+  <section id="about" class="py-5 bg-dark">
+    <div class="container py-5 text-white">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-4">About Us</h2>
+          <p class="lead text-white">
+            We are a forward-thinking institution committed to nurturing a culture of discovery, inclusion, and purpose-driven education.
+          </p>
+          <p>
+            Founded to address the dynamic needs of modern society, we empower learners to become ethical leaders and visionary innovators. Our holistic approach blends academic excellence with practical experience, ensuring graduates are ready to drive meaningful change in their communities and beyond.
+          </p>
+          <p>
+            Whether through cutting-edge research, collaborative programs, or social impact initiatives, our campus serves as a launchpad for lifelong learning and global citizenship.
+          </p>
+        </div>
+      </div>
+    </div>
 
- <!-- Bootstrap JS -->
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div id="mission" class="py-5 bg-white">
+      <div class="container py-5">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-4">Our Mission</h2>
+            <p class="lead text-muted">
+              💡 To spark curiosity, cultivate integrity, and shape futures through transformative education and principled leadership.
+            </p>
+            <p class="text-muted">
+              Our mission centers on advancing intellectual growth, encouraging creative inquiry, and fostering inclusive excellence. We prepare students to meet global challenges head-on by developing resilient, compassionate problem-solvers who lead with insight and purpose.
+            </p>
+            <p class="text-muted">
+              Through a curriculum grounded in relevance, rigor, and responsiveness, we champion personal development, community impact, and innovative progress across every discipline.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-4">Contact Information</h2>
+            <p class="text-muted mb-4">
+              Whether you're a prospective student, partner, or visitor, we'd love to hear from you.
+            </p>
+            <ul class="list-unstyled fs-5">
+              <li class="mb-3">📍 <strong>Address:</strong> Santo Tomas City, Calabarzon, Philippines</li>
+              <li class="mb-3">📞 <strong>Phone:</strong> <a href="tel:+63431234567" class="text-decoration-none text-dark">+63 (43) 123-4567</a></li>
+              <li class="mb-3">📧 <strong>Email:</strong> <a href="mailto:contact@universitydomain.edu" class="text-decoration-none text-dark">contact@universitydomain.edu</a></li>
+              <li class="mb-3">🌐 <strong>Website:</strong> <a href="https://www.universitydomain.edu" target="_blank" class="text-decoration-none text-dark">www.universitydomain.edu</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-4">Send Us a Message</h2>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Full Name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Email Address" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="How can we help you?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Branding and Vision -->
+        <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
+          <h5 class="fw-semibold">University of Research and Development</h5>
+          <p class="mb-1">&copy; 2025 All rights reserved.</p>
+          <p class="small fst-italic">Advancing knowledge. Shaping futures.</p>
+          <p class="mb-0 small">
+            📍 123 Innovation Blvd, Santo Tomas City, PH<br />
+            ☎️ (+63) 917 123 4567<br />
+            ✉️ info@urd.edu.ph
+          </p>
+        </div>
+
+        <!-- Navigation & Social Links -->
+        <div class="col-md-6 text-md-end text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://facebook.com/universityRD" class="text-white" target="_blank" aria-label="Facebook">
+                <i class="bi bi-facebook fs-5"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://instagram.com/universityRD" class="text-white" target="_blank" aria-label="Instagram">
+                <i class="bi bi-instagram fs-5"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/universityRD" class="text-white" target="_blank" aria-label="Twitter">
+                <i class="bi bi-twitter fs-5"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://linkedin.com/school/universityRD" class="text-white" target="_blank" aria-label="LinkedIn">
+                <i class="bi bi-linkedin fs-5"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
